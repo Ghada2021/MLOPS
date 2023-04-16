@@ -3,7 +3,6 @@ FROM jupyter/scipy-notebook
 RUN pip install joblib
 
 USER root
-RUN chmod -R 777 /var/lib/apt/lists
 RUN apt-get update && apt-get install -y jq
 
 RUN mkdir model raw_data processed_data results
