@@ -17,5 +17,5 @@ COPY preprocessing.py ./preprocessing.py
 COPY train.py ./train.py
 COPY test.py ./test.py
 
-CMD ["python", "train.py"]
+RUN python3 train.py
 
