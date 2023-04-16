@@ -19,3 +19,4 @@ COPY train.py ./train.py
 COPY test.py ./test.py
 
 CMD ["python", "train.py"]
+
