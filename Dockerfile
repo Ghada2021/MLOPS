@@ -2,8 +2,7 @@ FROM jupyter/scipy-notebook
 
 RUN pip install joblib
 
-USER root
-RUN  apt-get update && apt-get install -y jq
+
 
 RUN mkdir model raw_data processed_data results
 
@@ -18,5 +17,5 @@ COPY preprocessing.py ./preprocessing.py
 COPY train.py ./train.py
 COPY test.py ./test.py
 
-
+CMD ["python", "train.py"]
 
